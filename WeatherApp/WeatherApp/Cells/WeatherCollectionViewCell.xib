@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherCollectionViewCell" id="gTV-IL-0wX" customClass="WeatherCollectionViewCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="219"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="177" height="219"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5mo-px-X64">
+                        <rect key="frame" x="5" y="102" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="GLR-NZ-pKs"/>
+                            <constraint firstAttribute="height" constant="70" id="Yca-kE-n8f"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cH8-zP-gnd">
+                        <rect key="frame" x="80" y="94" width="70" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEp-vp-vht">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <state key="normal" title="💧"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reS-Ij-Siy">
+                                <rect key="frame" x="30" y="0.0" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="EVr-T2-dP2"/>
+                                    <constraint firstAttribute="height" constant="30" id="LEa-PP-n4e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="7DB-Vr-Tgo"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San José" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggq-Ct-2hw">
+                        <rect key="frame" x="5" y="12" width="167" height="23"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-P7-mUz">
+                        <rect key="frame" x="8" y="55" width="57" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHm-CP-cev">
+                                <rect key="frame" x="0.0" y="0.0" width="27" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-wm-C4e">
+                                <rect key="frame" x="27" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="dDm-0A-MdI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-jk-Gji">
+                        <rect key="frame" x="30" y="190" width="117" height="18"/>
+                        <color key="backgroundColor" red="0.32173732613661804" green="0.52781809167034255" blue="0.76019013666072488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="cvQ-pM-DQF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                        <state key="normal" title="Ver Pronóstico">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muy nublado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-az-SAJ">
+                        <rect key="frame" x="70" y="64" width="94" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.14298267334234641" green="0.36528004432211264" blue="0.75252525252525249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aJq-P7-mUz" firstAttribute="top" secondItem="Ggq-Ct-2hw" secondAttribute="bottom" constant="20" id="2Fm-5T-Qga"/>
+                <constraint firstItem="Ggq-Ct-2hw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="3AJ-fw-4gA"/>
+                <constraint firstItem="aJq-P7-mUz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="5WM-LT-92K"/>
+                <constraint firstItem="5mo-px-X64" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="9Rv-6d-tYZ"/>
+                <constraint firstAttribute="trailing" secondItem="Ggq-Ct-2hw" secondAttribute="trailing" constant="5" id="9mU-88-cYQ"/>
+                <constraint firstAttribute="bottom" secondItem="CzD-jk-Gji" secondAttribute="bottom" constant="11" id="E6r-d7-40H"/>
+                <constraint firstAttribute="trailing" secondItem="CzD-jk-Gji" secondAttribute="trailing" constant="30" id="FWj-z7-jlc"/>
+                <constraint firstItem="cH8-zP-gnd" firstAttribute="top" secondItem="FdM-az-SAJ" secondAttribute="bottom" constant="10.5" id="PV2-sb-NsZ"/>
+                <constraint firstItem="Ggq-Ct-2hw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Qv4-Jh-9Bq"/>
+                <constraint firstItem="FdM-az-SAJ" firstAttribute="top" secondItem="Ggq-Ct-2hw" secondAttribute="bottom" constant="29" id="V8C-eT-egS"/>
+                <constraint firstItem="FdM-az-SAJ" firstAttribute="leading" secondItem="aJq-P7-mUz" secondAttribute="trailing" constant="5" id="c4W-kj-rj4"/>
+                <constraint firstAttribute="bottom" secondItem="5mo-px-X64" secondAttribute="bottom" constant="47" id="ncq-bl-AWD"/>
+                <constraint firstAttribute="trailing" secondItem="cH8-zP-gnd" secondAttribute="trailing" constant="27" id="pWe-U8-X7P"/>
+                <constraint firstItem="CzD-jk-Gji" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="u3i-kU-mhI"/>
+                <constraint firstItem="cH8-zP-gnd" firstAttribute="leading" secondItem="5mo-px-X64" secondAttribute="trailing" constant="5" id="yLF-gh-ggx"/>
+            </constraints>
+            <size key="customSize" width="177" height="219"/>
+            <connections>
+                <outlet property="btnPronostico" destination="CzD-jk-Gji" id="EdZ-vA-py2"/>
+                <outlet property="img" destination="5mo-px-X64" id="fhf-Qu-hNd"/>
+                <outlet property="lbCiudad" destination="Ggq-Ct-2hw" id="hL0-Oz-kqU"/>
+                <outlet property="lbClima" destination="FdM-az-SAJ" id="kxA-5r-slM"/>
+            </connections>
+            <point key="canvasLocation" x="-161.59420289855075" y="117.52232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
