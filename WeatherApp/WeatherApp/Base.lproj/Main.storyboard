@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--El Clima-Costa Rica-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,9 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="28z-GT-n27">
+                                <rect key="frame" x="0.0" y="140.5" width="414" height="755.5"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36m-kI-nM5">
+                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wvp-aE-dcK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="816"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eh0-mW-cVr">
-                                <rect key="frame" x="0.0" y="238" width="414" height="619"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="230.5" width="414" height="631.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CNo-ur-AUu">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,13 +59,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Eh0-mW-cVr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="2Cn-AP-1xc"/>
+                            <constraint firstItem="Eh0-mW-cVr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="2Cn-AP-1xc"/>
+                            <constraint firstItem="28z-GT-n27" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ls-Sr-7y6"/>
                             <constraint firstItem="Eh0-mW-cVr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9d7-ax-kAs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eh0-mW-cVr" secondAttribute="trailing" id="VIy-fF-a6L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eh0-mW-cVr" secondAttribute="bottom" constant="5" id="x32-mu-gm1"/>
+                            <constraint firstItem="28z-GT-n27" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jn7-oY-AIT"/>
+                            <constraint firstItem="28z-GT-n27" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sjf-bc-RpT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eh0-mW-cVr" secondAttribute="bottom" id="x32-mu-gm1"/>
+                            <constraint firstAttribute="bottom" secondItem="28z-GT-n27" secondAttribute="bottom" id="xc7-Ke-kzX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6hl-qE-W3X"/>
+                    <navigationItem key="navigationItem" title="El Clima-Costa Rica" id="6hl-qE-W3X"/>
                     <connections>
                         <outlet property="collectionView" destination="Eh0-mW-cVr" id="QKm-vb-Cjj"/>
                     </connections>
@@ -80,9 +98,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GRV-7C-H7t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SaL-rz-pRS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" largeTitles="YES" id="SaL-rz-pRS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.079201098471619227" green="0.33590666337486014" blue="0.6137254902353535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -95,6 +118,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mountains" width="1280" height="853"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
