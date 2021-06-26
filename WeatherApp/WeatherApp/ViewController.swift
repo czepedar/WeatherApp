@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     let weatherCollectionViewCellId = "WeatherCollectionViewCell"
     
@@ -16,6 +17,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfield.layer.borderWidth = 2
+        textfield.layer.borderColor = #colorLiteral(red: 0.1349771549, green: 0.3916673131, blue: 0.6440285205, alpha: 1)
+        textfield.layer.cornerRadius = 10
+        textfield.layer.masksToBounds = true
      
         //registrar celda
         let nibCell = UINib(nibName: weatherCollectionViewCellId, bundle: nil)

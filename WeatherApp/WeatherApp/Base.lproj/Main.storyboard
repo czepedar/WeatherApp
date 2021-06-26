@@ -20,17 +20,27 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="28z-GT-n27">
                                 <rect key="frame" x="0.0" y="140.5" width="414" height="755.5"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36m-kI-nM5">
-                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wvp-aE-dcK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="816"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <vibrancyEffect>
-                                    <blurEffect style="light"/>
-                                </vibrancyEffect>
-                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite Algo Bueno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK1-jR-EeR">
+                                <rect key="frame" x="40" y="175.5" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4xz-I4-Cff"/>
+                                    <constraint firstAttribute="height" constant="30" id="smY-YI-bOg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Texto" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-fu-5o5">
+                                <rect key="frame" x="234" y="170.5" width="170" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="mVF-Hs-hih"/>
+                                    <constraint firstAttribute="height" constant="40" id="sYc-8C-Fh8"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eh0-mW-cVr">
                                 <rect key="frame" x="0.0" y="230.5" width="414" height="631.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,9 +72,13 @@
                             <constraint firstItem="Eh0-mW-cVr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="2Cn-AP-1xc"/>
                             <constraint firstItem="28z-GT-n27" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ls-Sr-7y6"/>
                             <constraint firstItem="Eh0-mW-cVr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9d7-ax-kAs"/>
+                            <constraint firstItem="IK1-jR-EeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="9d8-MA-jMc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eh0-mW-cVr" secondAttribute="trailing" id="VIy-fF-a6L"/>
+                            <constraint firstItem="4ra-fu-5o5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="jSS-Az-j5p"/>
                             <constraint firstItem="28z-GT-n27" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jn7-oY-AIT"/>
+                            <constraint firstItem="IK1-jR-EeR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="l07-hV-MON"/>
                             <constraint firstItem="28z-GT-n27" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sjf-bc-RpT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ra-fu-5o5" secondAttribute="trailing" constant="10" id="vOK-HI-9kF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eh0-mW-cVr" secondAttribute="bottom" id="x32-mu-gm1"/>
                             <constraint firstAttribute="bottom" secondItem="28z-GT-n27" secondAttribute="bottom" id="xc7-Ke-kzX"/>
                         </constraints>
@@ -72,11 +86,12 @@
                     <navigationItem key="navigationItem" title="El Clima-Costa Rica" id="6hl-qE-W3X"/>
                     <connections>
                         <outlet property="collectionView" destination="Eh0-mW-cVr" id="QKm-vb-Cjj"/>
+                        <outlet property="textfield" destination="4ra-fu-5o5" id="wvr-7f-ZRJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
+            <point key="canvasLocation" x="792.75362318840587" y="93.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pdw-BL-Njf">
@@ -91,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8d-u1-F2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="128"/>
+            <point key="canvasLocation" x="1554" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Ha-9w-NkJ">
